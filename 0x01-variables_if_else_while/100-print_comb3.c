@@ -1,31 +1,26 @@
 #include <stdio.h>
-
 /**
- * main - Prints the number from 00 to 99
+ * main - Prints the numbers from 00 to 99
  *
  * Return: Always (Success)
  */
 int main(void)
 {
-	int c, i;
+	int i, j;
 
-	c = i = '0';
-
-	for (c = '0'; c <= '9'; c++)
+	for (i = 0; i <= 8; i++)
 	{
-		for (i = '0'; i <= '9'; i++)
+		for (j = i + 1; j <= 9; j++)
 		{
-			putchar(c);
-			putchar(i);
-
-			if ((c != '9') || (c == '9' && i != '9'))
+			putchar(i + '0');
+			putchar(',');
+			putchar(' ');
+			putchar(j + '0');
+			if (i != 8 || j != 9)
 			{
-				putchar(',');
-				putchar(' ');
+				putchar('\n');
 			}
 		}
 	}
-	putchar('\n');
-
 	return (0);
 }
